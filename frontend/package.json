@@ -1,0 +1,26 @@
+{
+  "name": "user_management_frontend",
+  "version": "0.0.1",
+  "description": "micro-frontend for user management app",
+  "main": "index.js",
+  "author": "Erik Kurjak <e.kurjak@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "user_management/*"
+    ]
+  },
+  "scripts": {
+    "start": "concurrently \"wsrun --parallel start\"",
+    "start:live": "concurrently \"wsrun --parallel start:live\"",
+    "build:all": "concurrently \"wsrun --parallel build\"",
+    "build:serve:all": "yarn run build:all && yarn run serve:all"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.2",
+    "lerna": "^4.0.0",
+    "rimraf": "^3.0.2",
+    "wsrun": "^5.2.4"
+  }
+}
