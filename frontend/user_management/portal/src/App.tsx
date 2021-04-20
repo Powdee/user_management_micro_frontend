@@ -7,8 +7,9 @@ import {
   Link,
 } from 'react-router-dom';
 
-const LoginRoute = React.lazy(() => import('login/Route'));
-const SignUpRoute = React.lazy(() => import('signup/Route'));
+const LoginPage = React.lazy(() => import('login/page'));
+const SignUpPage = React.lazy(() => import('signup/page'));
+const UsersPage = React.lazy(() => import('users/page'));
  
 export const Portal = () => (
   <div className="App">
@@ -17,6 +18,8 @@ export const Portal = () => (
     <Link to="/login">Login</Link>
     <br/>
     <Link to="/signup">Signup</Link>
+    <br/>
+    <Link to="/users">Users</Link>
   </div>
 )
 
@@ -29,12 +32,17 @@ ReactDOM.render(
         </Route>
         <Route path="/login">
           <React.Suspense fallback={<span>loading...</span>}>
-            <LoginRoute />
+            <LoginPage />
           </React.Suspense>
         </Route>
         <Route path="/signup">
           <React.Suspense fallback={<span>loading...</span>}>
-            <SignUpRoute />
+            <SignUpPage />
+          </React.Suspense>
+        </Route>
+        <Route path="/users">
+          <React.Suspense fallback={<span>loading...</span>}>
+            <UsersPage />
           </React.Suspense>
         </Route>
       </Switch>

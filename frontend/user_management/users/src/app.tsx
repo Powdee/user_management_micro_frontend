@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
-import SignUpPage from './page';
+import UsersPage from './page';
 
 ReactDOM.render(
-    <SignUpPage />
+    <UsersPage />
   , document.getElementById('root'),
 );

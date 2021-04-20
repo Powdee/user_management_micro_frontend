@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
-import LoginRoute from './page';
+import LoginPage from './page';
 
 ReactDOM.render(
-  <LoginRoute />,
+  <LoginPage />,
   document.getElementById('root'),
 );

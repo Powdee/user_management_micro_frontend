@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const LoginRoute = () => (
+const LoginPage = () => (
 	<>
 		Login <br />
 		<Link to="/">go back</Link>
@@ -10,4 +10,4 @@ const LoginRoute = () => (
 	</>
 )
 
-export default LoginRoute;
+export default LoginPage;

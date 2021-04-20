@@ -35,7 +35,7 @@ module.exports = {
       name: 'login',
       filename: 'remoteEntry.js',
       exposes: {
-        './Route': './src/page',
+        './page': './src/page',
       },
       shared: {
         ...deps,

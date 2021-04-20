@@ -1,4 +1,5 @@
 /// <reference types="react-scripts" />
 
-declare module "login/Route";
-declare module "signup/Route";
+declare module "login/page";
+declare module "signup/page";
+declare module "users/page";
