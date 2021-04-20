@@ -14,8 +14,7 @@
   "scripts": {
     "start": "concurrently \"wsrun --parallel start\"",
     "start:live": "concurrently \"wsrun --parallel start:live\"",
-    "build:all": "concurrently \"wsrun --parallel build\"",
-    "build:serve:all": "yarn run build:all && yarn run serve:all"
+    "build:all": "concurrently \"wsrun --parallel build\""
   },
   "devDependencies": {
     "concurrently": "^6.0.2",

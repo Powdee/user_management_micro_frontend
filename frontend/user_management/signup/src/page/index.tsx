@@ -1,13 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const LoginRoute = () => (
+const SignUpRoute = () => (
 	<>
 		Login <br />
 		<Link to="/">go back</Link>
 		<br />
-		<Link to="/signup">Sign up</Link>
+		<br />
+		<br />
+		<br />
+		<br />
+		<Link to="/login">Login</Link>
 	</>
 )
 
-export default LoginRoute;
+export default SignUpRoute;
