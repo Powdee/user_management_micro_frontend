@@ -6,6 +6,7 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
+import Wrapper from './components/wrapper';
 
 const LoginPage = React.lazy(() => import('login/page'));
 const SignUpPage = React.lazy(() => import('signup/page'));
@@ -14,12 +15,12 @@ const UsersPage = React.lazy(() => import('users/page'));
 export const Portal = () => (
   <div className="App">
     Portal App
-
     <Link to="/login">Login</Link>
     <br/>
     <Link to="/signup">Signup</Link>
     <br/>
     <Link to="/users">Users</Link>
+    <Wrapper />
   </div>
 )
 
