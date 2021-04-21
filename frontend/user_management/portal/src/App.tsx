@@ -15,6 +15,10 @@ const LoginPage = React.lazy(() => import('login/page'));
 const SignUpPage = React.lazy(() => import('signup/page'));
 const UsersPage = React.lazy(() => import('users/page'));
 
+const NotFound = (): JSX.Element => (
+  <h1>Not found | 404</h1>
+)
+
 export const Portal = (): JSX.Element => (
   <React.StrictMode>
     <Navigation />
@@ -39,6 +43,7 @@ export const Portal = (): JSX.Element => (
               <UsersPage />
             </React.Suspense>
           </Route>
+          <Route component={NotFound} />
         </Switch>
       </Router>
     </Wrapper>
