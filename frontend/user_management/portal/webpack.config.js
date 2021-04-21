@@ -37,12 +37,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new ForkTsCheckerWebpackPlugin({
-      async: false
-    }),
-    new ESLintPlugin({
-      extensions: ["js", "jsx", "ts", "tsx"],
-    }),
     new ModuleFederationPlugin({
       name: 'portal',
       remotes: {
@@ -73,6 +67,12 @@ module.exports = {
     }),
     new HtmlWebPackPlugin({
       template: './src/index.html',
+    }),
+    new ForkTsCheckerWebpackPlugin({
+      async: false
+    }),
+    new ESLintPlugin({
+      extensions: ["js", "jsx", "ts", "tsx"],
     }),
   ],
 };
