@@ -1,10 +1,9 @@
 import React from 'react'
 
 const Layout = (props: any) => (
-	<section>
-		this will import tailwing
+	<main className="md:container md:mx-auto">
 		{props.children}
-	</section>
+	</main>
 )
 
 export default Layout;
