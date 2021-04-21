@@ -4,31 +4,25 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
 } from 'react-router-dom';
 import Navigation from './components/navigation';
 import Wrapper from './components/wrapper';
+import Home from './components/home';
 
 import './styles.css'
 
 const LoginPage = React.lazy(() => import('login/page'));
 const SignUpPage = React.lazy(() => import('signup/page'));
 const UsersPage = React.lazy(() => import('users/page'));
- 
+
 export const Portal = () => (
-  <div className="App">
-
-  </div>
-)
-
-ReactDOM.render(
   <React.StrictMode>
     <Navigation />
     <Wrapper>
       <Router>
         <Switch>
           <Route path="/" exact>
-            <Portal />
+            <Home />
           </Route>
           <Route path="/login">
             <React.Suspense fallback={<span>loading...</span>}>
@@ -48,6 +42,10 @@ ReactDOM.render(
         </Switch>
       </Router>
     </Wrapper>
-  </React.StrictMode>,
+  </React.StrictMode>
+)
+
+ReactDOM.render(
+  <Portal />,
   document.getElementById('root')
 );
