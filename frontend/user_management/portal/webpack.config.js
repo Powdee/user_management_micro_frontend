@@ -1,6 +1,8 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 const deps = require('./package.json').dependencies;
 
@@ -9,7 +11,7 @@ module.exports = {
     publicPath: 'http://localhost:3000/',
   },
   resolve: {
-    extensions: ['.jsx', '.js','.tsx', '.ts', '.json'],
+    extensions: [".tsx", ".ts", ".js"],
   },
   devServer: {
     port: 3000,
@@ -35,6 +37,12 @@ module.exports = {
     ],
   },
   plugins: [
+    new ForkTsCheckerWebpackPlugin({
+      async: false
+    }),
+    new ESLintPlugin({
+      extensions: ["js", "jsx", "ts", "tsx"],
+    }),
     new ModuleFederationPlugin({
       name: 'portal',
       remotes: {

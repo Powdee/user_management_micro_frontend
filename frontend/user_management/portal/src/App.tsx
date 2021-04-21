@@ -15,7 +15,7 @@ const LoginPage = React.lazy(() => import('login/page'));
 const SignUpPage = React.lazy(() => import('signup/page'));
 const UsersPage = React.lazy(() => import('users/page'));
 
-export const Portal = () => (
+export const Portal = (): JSX.Element => (
   <React.StrictMode>
     <Navigation />
     <Wrapper>
